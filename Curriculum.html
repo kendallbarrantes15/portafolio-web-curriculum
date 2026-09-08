@@ -61,7 +61,7 @@
             text-align:justify;
         }
 
-        /* --- ESPECIFICACIÓN SDD: ESTILOS BASE DE BOTONES --- */
+
         .btn-group {
             display: flex;
             flex-wrap: wrap;
@@ -89,7 +89,6 @@
             outline-offset: 3px;
         }
 
-        /* --- ESPECIFICACIÓN SDD: BOTÓN DE DESCARGA DE CV --- */
         .btn-cv {
             background: linear-gradient(135deg, #2563eb, #1d4ed8);
             color: white;
@@ -108,14 +107,12 @@
             box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
         }
 
-        /* Feedback dinámico de descarga para el botón de CV */
         .btn-cv.downloading {
             background: linear-gradient(135deg, #059669, #10b981) !important;
             box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4) !important;
             transform: translateY(0);
         }
 
-        /* --- ESPECIFICACIÓN SDD: BOTÓN DE LINKEDIN --- */
         .btn-linkedin {
             background-color: #0a66c2;
             color: white;
@@ -133,7 +130,7 @@
             transform: translateY(-1px);
         }
 
-        /* --- RESTO DE ESTILOS DE LA PÁGINA --- */
+    
         .hero-image{
             flex:1;
             min-width:280px;
@@ -259,7 +256,6 @@ y orientada a resolver problemas mediante herramientas modernas de desarrollo y
 tecnologías de Inteligencia Artificial.
 </p>
 
-<!-- IMPLEMENTACIÓN SDD: GRUPO DE BOTONES CON DESCARGA Y CONFIRMACIÓN VISUAL -->
 <div class="btn-group">
     <a href="Currículo de KENDALL ARMANDO BARRANTES OCONITRILLO.pdf" 
        download="Curriculum_Kendall_Barrantes.pdf"
@@ -407,7 +403,7 @@ contribuyo al éxito de la organización.
 
 </footer>
 
-<!-- JAVASCRIPT: FEEDBACK DE CONFIRMACIÓN DE DESCARGA -->
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const cvBtn = document.getElementById('cvDownloadBtn');
@@ -416,12 +412,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (cvBtn) {
         cvBtn.addEventListener('click', () => {
-            // Activar estado de confirmación visual de descarga
+            
             cvBtn.classList.add('downloading');
             cvIcon.textContent = '✅';
             cvText.textContent = '¡Descargando CV!';
 
-            // Restaurar estado original tras 2.5 segundos
             setTimeout(() => {
                 cvBtn.classList.remove('downloading');
                 cvIcon.textContent = '📥';
